@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MERN Developer Portfolio Design System - Dark Theme with Neon Accents */
+
+@layer base {
+  :root {
+    /* Dark Theme Base */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    /* Card System with Glass Morphism */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --glass: 240 10% 8%;
+    --glass-border: 240 3.7% 15.9%;
+
+    /* Popover */
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Brand Colors - Cyan to Purple Gradient */
+    --primary: 193 100% 50%;
+    --primary-foreground: 240 10% 3.9%;
+    --primary-glow: 280 100% 70%;
+    
+    /* Secondary - Purple Accent */
+    --secondary: 280 100% 70%;
+    --secondary-foreground: 240 10% 3.9%;
+
+    /* Muted Colors - Subtle Text */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Accent - Bright Cyan */
+    --accent: 193 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    /* Status Colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Borders and Inputs */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 193 100% 50%;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(193 100% 50%), hsl(280 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 100% 70%), hsl(240 100% 80%));
+    --gradient-dark: radial-gradient(ellipse at top, hsl(240 10% 8%), hsl(240 10% 3.9%));
+    
+    /* Shadows with Glow Effects */
+    --shadow-glow: 0 0 40px hsl(193 100% 50% / 0.3);
+    --shadow-glow-purple: 0 0 40px hsl(280 100% 70% / 0.3);
+    --shadow-glass: 0 8px 32px hsl(240 10% 3.9% / 0.3);
+    
+    /* Animation Values */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-dark);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Effect */
+  .glass {
+    background: hsl(var(--glass) / 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border) / 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Glow Effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-purple {
+    box-shadow: var(--shadow-glow-purple);
+  }
+  
+  /* Hover Animations */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Floating Animation */
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Typewriter Effect */
+  .typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typewriter 3s steps(30) 1s forwards, blink 1s infinite;
+  }
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    0%, 50% { border-color: hsl(var(--primary)); }
+    51%, 100% { border-color: transparent; }
+  }
+}
