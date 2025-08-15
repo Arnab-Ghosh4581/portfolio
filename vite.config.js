@@ -6,9 +6,8 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   build: {
-    rollupOptions: {
-      input: 'src/main.jsx'
-    }
+    outDir: 'dist', 
+    emptyOutDir: true, 
   },
   server: {
     host: "::",
