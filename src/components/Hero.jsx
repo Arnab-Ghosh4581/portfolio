@@ -61,15 +61,14 @@ const Hero = () => {
             <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
               Arnab Ghosh
             </h1>
-            <div className="text-2xl md:text-4xl font-semibold text-primary min-h-[3rem] flex items-center justify-center md:justify-start">
+            <div className="text-2xl md:text-4xl font-semibold text-primary min-h-[3rem] flex items-center justify-center md:justify-center">
               <span className="border-r-2 border-primary pr-2">
                 {displayText}
               </span>
             </div>
           </div>
-          {/* <div className="inline-block bg-[url('../../../public/my-dp.jpg')] bg-cover bg-center w-40 h-40 mt-20 rounded-full flex-shrink-0"></div> */}
         </div>
-        <div className="inline-block bg-[url('/my-dp.jpg')] bg-cover bg-center w-40 h-40 mt-20 rounded-full flex-shrink-0"></div>
+        <div className="inline-block bg-[url('/my-dp.jpg')] bg-cover bg-center w-40 h-40 mt-15 rounded-full flex-shrink-0"></div>
 
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
           Crafting digital experiences with MongoDB, Express.js, React, and Node.js. 
