@@ -4,10 +4,10 @@ import { Calendar, Award, Coffee, Code } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Code, label: "Projects Completed", value: "50+" },
+    { icon: Code, label: "Projects Completed", value: "5+" },
     { icon: Coffee, label: "Cups of Coffee", value: "1000+" },
-    { icon: Calendar, label: "Years Experience", value: "5+" },
-    { icon: Award, label: "Certifications", value: "8" }
+    //{ icon: Calendar, label: "Years Experience", value: "5+" },
+    { icon: Award, label: "Certifications", value: "3" }
   ];
 
   const journey = [

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
+
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
   const fullText = "MERN Stack Developer";
@@ -50,21 +51,25 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Hero Content */}
+      /* Hero Content */
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        <div className="mb-8">
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Hello, I'm
-          </h2>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
-            Arnab Ghosh
-          </h1>
-          <div className="text-2xl md:text-4xl font-semibold text-primary min-h-[3rem] flex items-center justify-center">
-            <span className="border-r-2 border-primary pr-2">
-              {displayText}
-            </span>
+        <div className="mb-8 flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8">
+          <div className="flex-1">
+            <h2 className="text-xl md:text-2xl text-muted-foreground mb-4">
+              Hello, I'm
+            </h2>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
+              Arnab Ghosh
+            </h1>
+            <div className="text-2xl md:text-4xl font-semibold text-primary min-h-[3rem] flex items-center justify-center md:justify-start">
+              <span className="border-r-2 border-primary pr-2">
+                {displayText}
+              </span>
+            </div>
           </div>
+          {/* <div className="inline-block bg-[url('../../../public/my-dp.jpg')] bg-cover bg-center w-40 h-40 mt-20 rounded-full flex-shrink-0"></div> */}
         </div>
+        <div className="inline-block bg-[url('../../../public/my-dp.jpg')] bg-cover bg-center w-40 h-40 mt-20 rounded-full flex-shrink-0"></div>
 
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
           Crafting digital experiences with MongoDB, Express.js, React, and Node.js. 
